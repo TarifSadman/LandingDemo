@@ -1,5 +1,14 @@
-import { Image } from "./image";
 import React from "react";
+import ReactImageGallery from "react-image-gallery";
+import DATA from '../data/data.json';
+import "react-image-gallery/styles/css/image-gallery.css";
+
+
+const images = DATA.Gallery.map((item) => ({
+  original: item.largeImage,
+  thumbnail: item.smallImage,
+  description: item.title,
+}));
 
 export const Gallery = (props) => {
   return (
@@ -14,20 +23,7 @@ export const Gallery = (props) => {
         </div>
         <div className="row">
           <div className="portfolio-items">
-            {props.data
-              ? props.data.map((d, i) => (
-                  <div
-                    key={`${d.title}-${i}`}
-                    className="col-sm-6 col-md-4 col-lg-4"
-                  >
-                    <Image
-                      title={d.title}
-                      largeImage={d.largeImage}
-                      smallImage={d.smallImage}
-                    />
-                  </div>
-                ))
-              : "Loading..."}
+                    <ReactImageGallery className="portfolio-item" items={images} />
           </div>
         </div>
       </div>
