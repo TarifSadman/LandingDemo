@@ -1,7 +1,8 @@
 import React from "react";
 import { Fade } from "react-reveal";
 
-export const About = (props) => {
+const About = (props) => {
+  console.log(props, "props");
   return (
     <div id="about">
       <div className="container">
@@ -44,3 +45,5 @@ export const About = (props) => {
     </div>
   );
 };
+
+export default About;

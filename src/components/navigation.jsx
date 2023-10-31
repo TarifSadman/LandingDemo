@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Navigation = (props) => {
+const Navigation = () => {
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -68,3 +68,5 @@ export const Navigation = (props) => {
     </nav>
   );
 };
+
+export default Navigation;

@@ -10,7 +10,7 @@ const images = DATA.Gallery.map((item) => ({
   description: item.title,
 }));
 
-export const Gallery = (props) => {
+const Gallery = () => {
   return (
     <div id="portfolio" className="text-center">
       <div className="container">
@@ -30,3 +30,5 @@ export const Gallery = (props) => {
     </div>
   );
 };
+
+export default Gallery;
